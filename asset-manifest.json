@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/smart-pulse/static/css/main.84b8a715.css",
+    "main.js": "/smart-pulse/static/js/main.6817439c.js",
+    "static/js/787.89074347.chunk.js": "/smart-pulse/static/js/787.89074347.chunk.js",
+    "index.html": "/smart-pulse/index.html",
+    "main.84b8a715.css.map": "/smart-pulse/static/css/main.84b8a715.css.map",
+    "main.6817439c.js.map": "/smart-pulse/static/js/main.6817439c.js.map",
+    "787.89074347.chunk.js.map": "/smart-pulse/static/js/787.89074347.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.84b8a715.css",
+    "static/js/main.6817439c.js"
+  ]
+}
