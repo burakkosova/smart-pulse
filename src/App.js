@@ -58,7 +58,6 @@ function App() {
 
   const now = new Date();
   let today = now.toISOString().slice(0, 10);
-  console.log(today);
 
   useEffect(() => {
     fetch(
@@ -70,7 +69,7 @@ function App() {
         setDataTable(info);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [today]);
 
   const column = [
     { heading: "Tarih", value: "date" },

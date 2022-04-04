@@ -23,10 +23,10 @@ const TableHeadItem = ({ item }) => <th>{item.heading}</th>;
 
 const TableRow = ({ item, column }) => (
   <tr>
-    {column.map((columnItem) => {
+    {column.map((columnItem, i) => {
       if (columnItem.value === "date") {
         return (
-          <td>
+          <td key={i}>
             {item[`${columnItem.value}`].toLocaleString(navigator.language, {
               hour12: false,
               year: "numeric",
@@ -39,7 +39,7 @@ const TableRow = ({ item, column }) => (
         );
       } else if (columnItem.value === "amount") {
         return (
-          <td>
+          <td key={i}>
             {new Intl.NumberFormat(navigator.language).format(
               item[`${columnItem.value}`]
             )}
@@ -50,7 +50,7 @@ const TableRow = ({ item, column }) => (
         columnItem.value === "average"
       ) {
         return (
-          <td>
+          <td key={i}>
             {new Intl.NumberFormat(navigator.language, {
               style: "currency",
               currency: "TRY",
@@ -58,7 +58,7 @@ const TableRow = ({ item, column }) => (
           </td>
         );
       } else {
-        return <td>{item[`${columnItem.value}`]}</td>;
+        return <td key={i}>{item[`${columnItem.value}`]}</td>;
       }
     })}
   </tr>
