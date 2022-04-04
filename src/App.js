@@ -7,19 +7,10 @@ function App() {
 
   useEffect(() => {
     fetch(
-      `https://seffaflik.epias.com.tr/transparency/service/market/intra-day-trade-history?endDate=${date}&startDate=${date}`,
-      {
-        method: "GET",
-        // mode: "no-cors",
-        Accept:
-          "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-        headers: {
-          "Content-Type": "application/xml",
-        },
-      }
+      `/transparency/service/market/intra-day-trade-history?endDate=${date}&startDate=${date}`
     )
-      .then((respone) => console.log(respone))
-      // .then((response) => response.json())
+      .then((response) => response.json())
+      .then((data) => console.log(data))
       .catch((err) => console.log(err));
   });
 
